@@ -13,7 +13,7 @@ boys giggling in the back with snacks galore,
 > only for me'>
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="site-header">
@@ -21,11 +21,38 @@ boys giggling in the back with snacks galore,
     <a href="../../index.html" class="site-title">Dancing in the Shadow</a>
     <nav class="site-nav">
       <a href="../../index.html">Home</a>
-      <a href="../../tags/index.html">Tags</a>
-      <a href="../../author/index.html">About</a>
+      <a href="../../tags/my-peace/index.html">My Peace</a>
+      <a href="../../tags/hyperemesis/index.html">Hyperemesis</a>
+      <a href="../../tags/road-to-healing/index.html">Road to Healing</a>
+      <span class="nav-dots-trigger" style="position:relative;display:inline-block">
+        <a href="#" onclick="return false;" style="font-size:14px;font-weight:700;padding:8px 14px;display:inline-block;color:var(--color-font)">&#8226;&#8226;&#8226;</a>
+        <div style="display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid var(--color-border);border-radius:5px;min-width:200px;box-shadow:0 4px 20px rgba(0,0,0,.1);z-index:200;padding:8px 0" class="nav-dots-menu">
+          <a href="../../tags/miscarriage/index.html" style="display:block;padding:10px 20px;font-size:14px;font-weight:700;color:var(--color-font);text-decoration:none;white-space:nowrap">Miscarriage</a>
+          <a href="../../tags/motherhood/index.html" style="display:block;padding:10px 20px;font-size:14px;font-weight:700;color:var(--color-font);text-decoration:none;white-space:nowrap">Motherhood</a>
+          <a href="../../tags/love/index.html" style="display:block;padding:10px 20px;font-size:14px;font-weight:700;color:var(--color-font);text-decoration:none;white-space:nowrap">Our Divine Romance</a>
+          <a href="../../tags/adventures/index.html" style="display:block;padding:10px 20px;font-size:14px;font-weight:700;color:var(--color-font);text-decoration:none;white-space:nowrap">Adventures with Littles</a>
+          <a href="../../tags/horses/index.html" style="display:block;padding:10px 20px;font-size:14px;font-weight:700;color:var(--color-font);text-decoration:none;white-space:nowrap">Healing of Horses</a>
+        </div>
+      </span>
     </nav>
   </div>
 </header>
+<script>
+(function(){
+  var triggers = document.querySelectorAll('.nav-dots-trigger');
+  triggers.forEach(function(trigger) {
+    var menu = trigger.querySelector('.nav-dots-menu');
+    if (!menu) return;
+    trigger.addEventListener('mouseenter', function(){ menu.style.display='block'; });
+    trigger.addEventListener('mouseleave', function(){ menu.style.display='none'; });
+    var links = menu.querySelectorAll('a');
+    links.forEach(function(a){ 
+      a.addEventListener('mouseenter', function(){ a.style.background='var(--color-bg-elements)'; a.style.color='var(--accent)'; });
+      a.addEventListener('mouseleave', function(){ a.style.background=''; a.style.color='var(--color-font)'; });
+    });
+  });
+})();
+</script>
 
 <main class="site-main">
   <header class="post-header">
@@ -59,8 +86,14 @@ boys giggling in the back with snacks galore,
   </a></div>
 </main>
 <footer class="site-footer">
-  <p>© Dancing in the Shadow · Written by Margaret LaVigne Rogness</p>
-  <p style="margin-top:0.5rem">A personal blog about motherhood, healing, faith, and life's shadow places.</p>
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:20px">
+    <a href="../../index.html" style="font-size:18px;font-weight:700;color:var(--color-font);text-decoration:none">Dancing in the Shadow</a>
+    <div style="font-size:13px;color:var(--color-meta)">The Best is Yet to Come</div>
+    <a href="https://www.facebook.com/MaggieLaVigneRogness/" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--color-border)" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-meta)"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>
+    </a>
+  </div>
+  <div style="text-align:center;font-size:13px;color:var(--color-meta);padding:0 40px">&copy; 2026 Dancing in the Shadow. All Rights Reserved.</div>
 </footer>
 
 </body>
